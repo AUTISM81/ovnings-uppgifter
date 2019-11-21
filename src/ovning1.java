@@ -6,8 +6,11 @@ public class ovning1 {
         Scanner kb = new Scanner(System.in);
 
         //variable
-        int [] b1 = new int [10];
+        System.out.println("how many number would you like to count the average of?");
+        int x = kb.nextInt();
+        int [] b1 = new int [x];
         int count = 1;
+        double summa = 0;
 
         //variable numbers
         System.out.println("Type in 10 the numbers you want to know the average of?");
@@ -17,7 +20,9 @@ public class ovning1 {
             b1[i] = kb.nextInt();
             count++;
         }
-        double summa = b1[1] + b1[2] + b1[3] + b1[4] + b1[5] + b1[6] + b1[7] + b1[8] + b1[9] + b1[0];
-                System.out.println("Your average is " + summa/10);
+        for (int y = 0; y < b1.length; y++){
+            summa = summa + b1[y];
+        }
+                System.out.println("Your average is " + summa/x);
     }
 }
